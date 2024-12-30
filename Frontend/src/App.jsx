@@ -27,6 +27,7 @@ const App = () => {
       <Footer/>
       <ToastContainer theme='dark' position='top-center'/>
      </Router>
+
   )
 }
 export  default App
