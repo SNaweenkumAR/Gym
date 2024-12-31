@@ -16,7 +16,7 @@ const Contact = () => {
     try {
 
       const {data} = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/send/mail`,
+        `${import.meta.env.VITE_BACKEND_URL}/send/mail`, 
         {
           name,
           email,
@@ -34,8 +34,12 @@ const Contact = () => {
       setLoad(false)
       
     } catch (error) {
-       
+       if(error.response){
            toast.error(error.response.data.message);
+       }else{
+        toast.error('An error occured while sending msg');
+       }
+       setLoad(false);
 
     }
   }
