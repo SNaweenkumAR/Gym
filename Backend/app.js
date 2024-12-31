@@ -22,8 +22,8 @@ mongoose
 
 
 app.use(cors({
-    origin:[process.env.FRONTEND_URL,"http://localhost:5173"],
-    methods:["POST","GET"],
+    origin:[process.env.FRONTEND_URL,"http://localhost:5173/"],
+    methods:["POST"],
     credentials:true
 }));
 
